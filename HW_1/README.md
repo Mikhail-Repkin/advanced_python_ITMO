@@ -10,7 +10,7 @@
 
 ### Инструкция по запуску
 1. Склонируйте репозиторий `git clone https://github.com/Mikhail-Repkin/advanced_python_ITMO.git`
-2. Перейдем в папку `cd HW_1`
+2. Перейдем в папку `cd advanced_python_ITMO/HW_1`
 3. Создаем виртуальное окружение и устанавливаем зависимости:  
    * `poetry install`    
      *или*
