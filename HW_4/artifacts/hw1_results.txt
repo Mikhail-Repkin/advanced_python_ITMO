@@ -1,0 +1,4 @@
+Method		Time
+Sync		19.9335
+Threads		19.8377
+Processes	3.1987

@@ -1,0 +1,16 @@
+Enter a message or 'QUIT' to exit:HELLO!
+23:41:43 input: HELLO!
+23:41:43 в процесс A: HELLO!
+23:41:43 в процесс B: hello!
+23:41:43 output: uryyb!
+Enter a message or 'QUIT' to exit:world!
+23:41:50 input: world!
+23:41:50 в процесс A: world!
+23:41:50 в процесс B: world!
+23:41:50 output: jbeyq!
+Enter a message or 'QUIT' to exit:BYE!
+23:42:01 input: BYE!
+23:42:01 в процесс A: BYE!
+23:42:01 в процесс B: bye!
+23:42:01 output: olr!
+Enter a message or 'QUIT' to exit:QUIT
