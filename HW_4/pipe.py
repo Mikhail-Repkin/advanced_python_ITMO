@@ -1,23 +1,28 @@
 from multiprocessing import Queue, Pipe, Process
 import time
 from codecs import encode
+from queue import Empty
 
 
 def pr_a(queue_main_a, queue_a_b):
     while True:
-        message = queue_main_a.get()
-        print(f"{time.strftime('%H:%M:%S')} в процесс A: {message}")
-        message_lower = message.lower()
-        queue_a_b.put(message_lower)
-        time.sleep(5)
+        try:
+            message = queue_main_a.get(block=False)
+            message_lower = message.lower()
+            queue_a_b.put(message_lower, block=False)
+            time.sleep(5)
+        except Empty:
+            pass
 
 
 def pr_b(queue_a_b, queue_b_main):
     while True:
-        message = queue_a_b.get()
-        print(f"{time.strftime('%H:%M:%S')} в процесс B: {message}")
-        encoded_message = encode(message, "rot_13")
-        queue_b_main.put(encoded_message)
+        try:
+            message = queue_a_b.get(block=False)
+            encoded_message = encode(message, "rot_13")
+            queue_b_main.put({f"{message}": encoded_message}, block=False)
+        except Empty:
+            pass
 
 
 if __name__ == "__main__":
@@ -35,13 +40,17 @@ if __name__ == "__main__":
 
     try:
         while True:
-            message = input("Enter a message or 'QUIT' to exit:")
+            message = input(f"{time.strftime('%H:%M:%S')} " +
+                            "Enter a message or 'QUIT' to exit:")
             if message == 'QUIT':
                 break
             print(f"{time.strftime('%H:%M:%S')} input: {message}")
-            queue_main_a.put(message.strip())
-            message = queue_b_main.get()
-            print(f"{time.strftime('%H:%M:%S')} output: {message}")
+            queue_main_a.put(message.strip(), block=False)
+            try:
+                message = queue_b_main.get(block=False)
+                print(f"{time.strftime('%H:%M:%S')} output для: {message}")
+            except Empty:
+                pass
     finally:
         process_a.terminate()
         process_b.terminate()

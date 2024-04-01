@@ -1,16 +1,12 @@
-Enter a message or 'QUIT' to exit:HELLO!
-23:41:43 input: HELLO!
-23:41:43 в процесс A: HELLO!
-23:41:43 в процесс B: hello!
-23:41:43 output: uryyb!
-Enter a message or 'QUIT' to exit:world!
-23:41:50 input: world!
-23:41:50 в процесс A: world!
-23:41:50 в процесс B: world!
-23:41:50 output: jbeyq!
-Enter a message or 'QUIT' to exit:BYE!
-23:42:01 input: BYE!
-23:42:01 в процесс A: BYE!
-23:42:01 в процесс B: bye!
-23:42:01 output: olr!
-Enter a message or 'QUIT' to exit:QUIT
+01:21:38 Enter a message or 'QUIT' to exit:HELLO!
+01:21:39 input: HELLO!
+01:21:39 Enter a message or 'QUIT' to exit:world!
+01:21:42 input: world!
+01:21:42 output для: {'hello!': 'uryyb!'}
+01:21:42 Enter a message or 'QUIT' to exit:BYE!
+01:21:46 input: BYE!
+01:21:46 output для: {'world!': 'jbeyq!'}
+01:21:46 Enter a message or 'QUIT' to exit:
+01:21:53 input:
+01:21:53 output для: {'bye!': 'olr!'}
+01:21:53 Enter a message or 'QUIT' to exit:QUIT
