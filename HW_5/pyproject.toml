@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "hw-5"
+version = "0.1.0"
+description = "hw_5"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiohttp = "^3.9.3"
+aiofiles = "^23.2.1"
+bs4 = "^0.0.2"
+pandas = "^2.2.1"
+aiomisc = "^17.5.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

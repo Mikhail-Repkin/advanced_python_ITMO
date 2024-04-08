@@ -7,7 +7,7 @@
 | 2 | [Реализация генератора LaTeX и конвертера в pdf](https://github.com/Mikhail-Repkin/advanced_python_ITMO/tree/main/HW_2) |
 | 3 | [Классы для работы с матрицами (практика ООП)](https://github.com/Mikhail-Repkin/advanced_python_ITMO/tree/main/HW_3) |
 | 4 | [Концепции многозадачности](https://github.com/Mikhail-Repkin/advanced_python_ITMO/tree/main/HW_4) |
-| 5 | ... |
+| 5 | [Асинхронность](https://github.com/Mikhail-Repkin/advanced_python_ITMO/tree/main/HW_5) |
 
 ## Структура репозитория
 
@@ -25,6 +25,7 @@
 │    └───artifacts                              # Папка с артефактами
 ├───HW_4                                        # Проект №4: Концепции многозадачности
 │    └───artifacts                              # Папка с артефактами
-│
-...
+├───HW_5                                        # Проект №5: Асинхронность
+│    └───artifacts                              # Папка с артефактами
+
 ```
